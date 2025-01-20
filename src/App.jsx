@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       {/* <Route path="/about" element={<AboutPage />} /> */}
-      {/* Add your other routes here */}
+
       {/* Catch-all route for 404 */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
