@@ -11,7 +11,7 @@ const PageNotFound = () => {
       {/* <div className="flex-grow flex justify-center items-center">
         <img src={ErrorImage} alt="404 Error" className="max-w-full h-1/6" />
       </div> */}
-      <div className="flex-grow flex bg-white  justify-center items-center bg-gray-900">
+      <div className="flex-grow flex bg-white  justify-center items-center">
         <video
           src={ErrorVideo}
           autoPlay
