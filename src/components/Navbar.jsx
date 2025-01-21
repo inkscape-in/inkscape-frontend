@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Menu, X, BookOpen, Pen, Instagram, Twitter, Facebook } from 'lucide-react';
 import inscape_logo from "../assets/inkscape-logo.png"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
               <img src={inscape_logo} alt="Inkscape" className="h-16 w-auto mt-2" />
-              <a href="/" className='text-xl sm:text-xl font-semibold text-gray-900 hover:text-red-700 cursor-pointer'>inkScape</a>
+              <Link to="/" className='text-xl sm:text-xl font-semibold text-gray-900 hover:text-red-700 cursor-pointer'>inkScape</Link>
             </div>
   
             {/* Mobile menu button */}
@@ -26,9 +27,9 @@ const Navbar = () => {
   
             {/* Desktop menu */}
             <div className="hidden md:flex space-x-8">
-              <a href="/about" className="text-gray-800 hover:text-red-700">About</a>
+              <Link to="/about" className="text-gray-800 hover:text-red-700">About</Link>
               {/* <a href="#" className="text-gray-800 hover:text-red-700">Services</a> */}
-              <a href="/about" className="text-gray-800 hover:text-red-700">Contact</a>
+              <Link to="/about" className="text-gray-800 hover:text-red-700">Contact</Link>
             </div>
           </div>
         </div>
@@ -37,9 +38,9 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-gray-800 hover:text-red-700">About</a>
+              <Link to="/about" className="block px-3 py-2 text-gray-800 hover:text-red-700">About</Link>
               {/* <a href="#" className="block px-3 py-2 text-gray-800 hover:text-red-700">Services</a> */}
-              <a href="#" className="block px-3 py-2 text-gray-800 hover:text-red-700">Contact</a>
+              <Link to="/about" className="block px-3 py-2 text-gray-800 hover:text-red-700">Contact</Link>
             </div>
           </div>
         )}
